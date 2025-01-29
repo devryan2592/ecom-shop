@@ -10,7 +10,7 @@ const Header = () => {
   return (
     <header>
       <TopBar />
-      <div className="container px-2 md:px-1 w-full mx-auto flex items-center justify-between space-x-4 h-16 ">
+      <div className="container px-2 md:px-1 w-full mx-auto flex items-center justify-between space-x-4 h-20 ">
         {/* Logo */}
         <div className="flex gap-2 items-center">
           <div className="md:hidden">
@@ -62,7 +62,7 @@ const Header = () => {
         </div>
       </div>
 
-      <div className="px-3 md:hidden grow items-center gap-2">
+      <div className="container px-2 md:px-1 w-full mx-auto md:hidden grow items-center gap-2">
         <Search />
       </div>
     </header>
