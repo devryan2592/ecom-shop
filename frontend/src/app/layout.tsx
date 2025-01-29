@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Barlow, Inter } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from "@/providers/theme-provider";
 
 // Fonts
 const barlowFont = Barlow({
@@ -30,7 +31,15 @@ export default function RootLayout({
       <body
         className={`${interFont.className} ${barlowFont.variable} antialiased`}
       >
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+          storageKey="smartshop-theme"
+        >
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
